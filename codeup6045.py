@@ -1,0 +1,5 @@
+a, b, c = input().split()
+a = int(a)
+b = int(b)
+c = int(c)
+print(a + b + c, round((float(a) + float(b) + float(c)) / 3, 2))
