@@ -1,0 +1,208 @@
+숫자처리 함수
+abs: 절대값
+ex) print(abs(-5)) #5
+
+pow:제곱
+ex) print(pow(4,2)) # 4 ^ 2 = 4 * 4 = 16
+
+max: 최댓값
+min: 최솟값
+ex) print(max(5, 12)) # 12
+print(min(5, 12)) # 5
+
+round: 반올림
+ex) print(round(3.14)) # 3
+print(round(4.99)) # 5
+
+------------------------
+
+from math import *
+
+floor: 내림
+ex) print(floor(4.99)) # 4
+
+ceil: 올림
+ex) print(ceil(3.14)) # 4
+
+sqrt: 제곱근, 루트
+ex) print(sqrt(16)) # 4
+
+-----------------------
+랜덤 함수
+from random import *
+
+random: 랜덤 수 받기
+ex) print(random()) # 0.0 ~ 1.0 미만의 임의의 값 생성
+print(random() * 10) # 0.0 ~ 10.0 미만의 임의의 값 생성
+print(int(random() * 10)) # 0 ~ 10 미만의 임의의 값 생성
+print(int(random() * 10 + 1)) # 1 ~ 10 이하의 임의의 값 생성
+
+randrange: 램덤수 범위지정
+ex) print(randrange(1, 45)) # 1 ~ 45 미만의 임의의 값 생성
+
+randint: 랜덤수 범위지정
+ex) print(randint(1, 45)) # 1 ~ 45 이하의 임의의 값 생성
+
+shuffle: 안에 있는 것을 램덤하게 섞는 것
+ex) shuffle(lst)
+
+sample: 안에서 몇개를 뽑는다.
+ex) print(sample(lst, 1))
+
+-----------------------
+문자열 처리 함수
+python = "Python is Amazing"
+
+lower: 문자열 모두 소문자로 출력
+ex) print(python.lower()) # python is amazing
+
+upper: 문자열 모두 대문자로 출력
+ex) print(python.upper()) # PYTHON IS AMAZING
+
+isupper: 특정자리 숫자가 대문자면 True 아니면 False
+ex) print(python[0].isupper()) # True
+
+len: 문자열 길이
+ex) print(len(python)) # 17
+
+replace: 특정 문자를 바꾸어 출력
+ex) print(python.replace("Python", "Java")) # Java is Amazing
+print(python.replace("Python", "")) # is Amazing
+
+index: 특정 단어의 위치를 찾는 것
+※ 찾는 특정 단어가 없으면 오류 발생
+ex) print(python.index("n")) # 5
+index = python.index("n", index + 1) # 6번째부터 시작해서 n이 몇번에 있는지 찾는 것
+print(index) # 15 
+
+find: 원하는 특정 단어의 위치를 찾는 것
+※ 찾는 특정 문자가 없으면 -1을 출력
+
+count: 원하는 특정 단어가 몇번 나왔는지 세어줌
+ex) print(python.count("n")) # 2
+
+---------------------
+탈출 문자
+\\: 문장내에서 \
+
+\r: 커서를 맨 앞으로 이동
+ex) print("Red Apple\rPine") # PineApple
+
+\b: 백 스페이스(한 글자 삭제)
+
+\t: 탭
+
+---------------------
+리스트: 자료형을 따지지 않음
+subway = ["유재석", "조세호", "박명수"]
+
+append: 리스트에 마지막에 추가하는 함수
+ex) subway.append("하하") # ['유재석', '조세호', '박명수', '하하']
+
+insert: 특정위치에 추가하는 것
+ex) subway.insert(1, "정형돈") # ["유재석", "정형돈","조세호", "박명수"]
+
+pop: 맨 마지막부터 순서대로 없애는 것
+ex) subway.pop()  ["유재석", "조세호"]
+
+count: 원하는 게 몇게 들어가있는지 확인
+ex) subway.count("찾는 거")
+
+sort: 정열
+ex) num_list = [5, 4, 3, 2, 1]
+num_list.sort() # [1, 2, 3, 4, 5]
+
+reverse: 뒤집기
+ex) num_list = [1, 2, 3, 4, 5]
+num_list.reverse() # [5, 4, 3, 2, 1]
+
+clear: 모두 제거
+ex) num_list = [1, 2, 3, 4, 5]
+num_list.clear # []
+
+extend: 리스트 확장
+ex) num_list = [1, 2, 3, 4, 5]
+mix_list = ["조세호", 20, True] 
+num_list.extend(mis_list) # [1, 2, 3, 4, 5. "조세호", 20, True]
+
+-------------
+사전
+cabinet = {3:"유재석", 100:"김태호"}
+cabinet = {"A-3":"유재석", "B-100":"김태호"}
+
+get: 키에 해당하는 값을 가져오는 것, 입력한 키가 없으면 none을 출력하고 프로그램 계속 실행됨
+ex) cabinet.get(3) # 유재석
+cabinet.get(5) # none
+
+in: 특정 문자가 리스트에 있는 지 확인
+ex) print(3 in cabinet) # true
+print(5 in cabinet) # False
+
+사전에 추가
+ex) cabinet["c-20"] = "조세호"
+만약에 추가했는데 키가 같으면 업데이트됨
+
+del 키삭제
+ex) del cabinet["A-3"] #print ['B-100': '김태호']
+
+Key 들만 출력
+ex) print(cabinet.keys())
+
+value 들만 출력
+print(cabinet.values())
+
+kay, value 쌍으로 출력
+print(cabinet.items())
+
+clear 모두 삭제
+ex) cabinet.clear()
+
+------------------------
+튜플 - 내용변경 추가 못함, 속도가 리스트보다 빠름
+menu = ("돈까스", "치즈까스")
+
+print(menu[0]) # 돈까스
+print(menu[1]) # 치즈까스
+
+----------------------------
+set - 중복x, 순서 없음
+my_set = {1,2,3,3,3}
+java = {"유재석", "김태호", "양세형"}
+python = set(["유재석", 박명수])
+
+print(my_set) # {1,2,3}
+
+# 교집합(java 와 python을 모두 할 수 있는 개발자)
+print(java & python) # {'유재석'}
+print(java.intersection(python)) # {'유재석'}
+
+# 합집합 (java 도 할 수 있거나 python 할 수 있는 개발자)
+print(java | python) # {'김태호', '박명수', '유재석', '양세형'}
+print(java.union(python)) # {'김태호', '박명수', '유재석', '양세형'}
+
+# 차집합 (java 할 수 있지만 python을 할 줄 모르는 개발자)
+print(java - python)
+print(java.difference(python))
+
+# python 하 줄 아는 사람이 늘어남
+python.add("김태호")
+
+# java를 잊었어요
+java.remove("김태호")
+
+----------------------------------------
+# 자료구조의 변경
+#커피숍
+menu = {"커피", "우유", "주스"}
+
+menu = list(menu)
+print(menu, type(menu)) # type이 리스트사됨
+
+menu = tuple(menu)
+print(menu, type(menu))
+
+menu = set(menu)
+print(menu, type(menu))
+
+----------------------------------
+class
