@@ -1,0 +1,33 @@
+cabinet = {3:"유재석", 100:"김태호"}
+cabinet = {"A-3":"유재석", "B-100":"김태호"}
+
+사전 선언방법
+newdict = dict(alice = 5, bob = 20, tony = 15, suzy = 30)
+# {'alice' : 5, 'bob' : 20, 'tony' : 15, 'suzy' : 30}
+
+get: 키에 해당하는 값을 가져오는 것, 입력한 키가 없으면 none을 출력하고 프로그램 계속 실행됨
+ex) cabinet.get(3) # 유재석
+cabinet.get(5) # none
+
+in: 특정 문자가 리스트에 있는 지 확인
+ex) print(3 in cabinet) # true
+print(5 in cabinet) # False
+
+사전에 추가
+ex) cabinet["c-20"] = "조세호"
+만약에 추가했는데 키가 같으면 업데이트됨
+
+del 키삭제
+ex) del cabinet["A-3"] #print ['B-100': '김태호']
+
+keys: Key 들만 출력
+ex) print(cabinet.keys())
+
+values: value 들만 출력
+print(cabinet.values())
+
+items: kay, value 쌍으로 출력
+print(cabinet.items())
+
+clear: 모두 삭제
+ex) cabinet.clear()
