@@ -1,0 +1,30 @@
+숫자처리 함수
+abs: 절대값
+ex) abs(-5) #5
+
+pow:제곱
+ex) pow(4,2) # 4 ^ 2 = 4 * 4 = 16
+
+max: 최댓값
+ex) max(5, 12) # 12
+
+min: 최솟값
+ex) min(5, 12) # 5
+
+round: 반올림
+ex) round(3.14) # 3
+ex) round(3.1415, 2) # 3.14
+ex) round(31.415, -1) # 30.0
+ex) round(31.415, -2) # 0.0
+
+bin: 2진수
+ex) bin(10) # 0b1010
+
+oct: 8진수
+ex) oct(10) # 0o12
+
+ord: 10진수
+ex) ord('a') # 97 
+
+hex: 16진수
+ex) hex(10) # 0xa
