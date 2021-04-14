@@ -1,0 +1,45 @@
+python = "Python is Amazing"
+
+split: 괄호안의 값으로 문자열을 나눔(기본은 공백, 그 외 특정문자 사용 시에는 따음표 사용)
+ex) python.split() # ['Python', 'is', 'Amazing']
+
+len: 문자열 길이
+ex) len(python) # 17
+
+count: 원하는 특정 단어가 몇번 나왔는지 세어줌
+ex) python.count("n") # 2
+
+1) 대, 소문자 변환
+lower: 문자열 모두 소문자로 출력
+ex) python.lower() # python is amazing
+
+upper: 문자열 모두 대문자로 출력
+ex) python.upper() # PYTHON IS AMAZING
+
+isupper: 특정자리 숫자가 대문자면 True 아니면 False
+ex) python[0].isupper() # True
+
+swapcase: 대문자 -> 소문자, 소문자 -> 대문자
+ex) python.swapcase # pYTHON IS aMAZING
+
+capitalize: 첫문자를 대문자로
+ex) c='python is amazing' -> c.capitalize() # Python is amazing
+
+title: 단어의 첫문자들을 대문자로
+ex) c='python is amazing' -> c.title() # Python Is Amazing
+
+replace: 특정 문자를 바꾸어 출력
+ex) python.replace("Python", "Java") # Java is Amazing
+ex) python.replace("Python", "") # is Amazing
+
+join: 문자열1의 문자 사이에 변수값 삽입
+ex) c=',' -> c.join('가다다라') # '가,나,다,라'
+
+2) 검색
+index: 특정 단어의 위치를 찾는 것
+※ 찾는 특정 단어가 없으면 오류 발생
+ex) python.index("n") # 5
+ex) index = python.index("n", index + 1) # 6번째부터 시작해서 n이 몇번에 있는지 찾는 것 -> print(index) # 15 
+
+find: 원하는 특정 단어의 위치를 찾는 것
+※ 찾는 특정 문자가 없으면 -1을 출력
