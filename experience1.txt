@@ -1,0 +1,10 @@
+1. sys.stdin.readline으로 값을 입력받는데 자료형을 지정해주지 않으면 끝에 \n이 붙음
+2. lambda를 활용하여 문자열 정렬을 어떻게 할지 내가 정할 수 있음
+ex) lst.sort(key= lambda x: len(x))
+3. 문자열[::-1]하면 역으로 저장가능 ex)apple -> elppa
+
+word = list(input())
+
+입력:12345
+print(word)
+#[1,2,3,4,5]
